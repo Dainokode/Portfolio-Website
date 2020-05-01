@@ -1,0 +1,249 @@
+// Tablets & Smaller screens
+@media (max-width: 800px) {
+  // header content
+  #header {
+    &-home {
+      height: 30rem;
+
+      .header-content {
+        padding-top: 5rem;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    &-about {
+      height: 10vh;
+    }
+  }
+
+  // Home sections
+  #home {
+    // section B: stats
+    &-b {
+      .stats {
+        div {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  #projects-a .items {
+    margin-bottom: 6rem;
+  }
+
+  // contact a increase margin
+  #contact {
+    &-a {
+      padding: 5rem 0;
+    }
+  }
+
+  #contact-b {
+    .contact-info {
+      margin: 5rem;
+    }
+  }
+}
+
+// Smarphones
+@media (max-width: 500px) {
+  // Nav
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  // Header
+  #header {
+    &-home {
+      height: 10rem;
+      background-position: 20% 30%;
+      border-bottom: 3px solid $main-color;
+
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-about {
+      height: 10rem;
+    }
+  }
+
+  // Stack grid items
+  #home-b .stats,
+  #home-c .process,
+  #about-d .testimonials,
+  #projects-a .items,
+  #contact-b .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  // Home Sections
+  #home {
+    // section A: tecnologies
+    &-a {
+      .technologies {
+        i {
+          font-size: 3.5rem;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    // Section B: stats
+    &-b {
+      .stats div {
+        padding: 1rem;
+      }
+    }
+  }
+
+  // About Sections
+  #about {
+    // About A: about me
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bioimage"
+          "bio"
+          "aw1"
+          "aw2"
+          "aw3";
+      }
+    }
+
+    // About C: logos
+    &-c {
+      display: none;
+    }
+  }
+
+  // Contact Sections
+  #contact {
+    // contatct A: text fields
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+    }
+
+    // contact b: contact info
+    &-b {
+      div {
+        margin: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #555;
+
+        &:last-child {
+          border: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // Contact C: slogan
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: 6rem;
+    .footer-content {
+      flex-direction: column;
+      height: 6rem;
+      padding: 0.5rem;
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// landscape
+@media (max-height: 580px) {
+  #header {
+    &-home {
+      .header-content {
+        padding-top: 5%;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    &-about {
+      height: 5rem;
+      background-position: 20% 30%;
+    }
+  }
+}
+
+// iphone 5x landscape
+@media (max-height: 320px) {
+  #header {
+    &-home {
+      height: 20rem;
+
+      .header-content {
+        padding-top: 5%;
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &-about {
+      height: 5rem;
+      background-position: 20% 30%;
+    }
+  }
+
+  // stack grid process
+  #home-c .process {
+    grid-template-columns: 1fr;
+    margin: 0 5rem;
+  }
+}
+
+// fix white space at the bottom(inner pages)for large screens
+@media (min-width: 1024px) {
+  #header {
+    &-home {
+      height: 50rem;
+
+      .header-content {
+        padding-top: 20%;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+    }
+
+    &-about {
+      height: 50vh;
+    }
+  }
+}
